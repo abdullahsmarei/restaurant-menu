@@ -1,251 +1,481 @@
+/* Basic Reset and Box Sizing */
+html {
+    font-size: 16px; /* Establishes a base for rem units */
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(243, 243, 243);
-    margin: 0px;
-    padding: 0px;
+    background-color: rgb(243, 243, 243); /* */
+    margin: 0px; /* */
+    padding: 0px; /* */
+    font-family: sans-serif; /* Added a default font for consistency */
 }
 
 .firsthead {
-    margin-top: 50px;
+    margin-top: 50px; /* */
+    color: #f39c12; /* */
+    font-size: 50px; /* */
+    text-align: center; /* Ensures the heading is centered, as seen with <center> tag in HTML */
 }
 
 .card-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    min-width: 400px;
-    min-height: 400px;
-    align-items: center;
+    margin-top: 20px; /* */
+    display: flex; /* */
+    justify-content: center; /* */
+    flex-wrap: wrap; /* */
+    gap: 20px; /* */
+    /* min-width: 400px; */ /* Removed to prevent overflow on small screens */
+    padding: 0 10px; /* Add some padding for small screens */
+    min-height: 400px; /* */
+    align-items: center; /* Changed from default 'stretch' to 'center' for better alignment if cards vary in actual height */
 }
 
 .card {
-    height: 150px;
-    width: 150px;
-    min-width: 400px;
-    min-height: 460px;
-    text-align: center;
-    transition: 0.4s;
-    border-radius: 10px;
-    background-color:white ;
-    box-shadow: 1px 1px 2px ;
+    /* height: 150px; */ /* Conflicted with min-height, removing */
+    /* width: 150px;  */ /* Conflicted with min-width, removing */
+    width: 90%;       /* Default to responsive width for smaller screens */
+    max-width: 400px; /* Max width based on original min-width */
+    min-height: 460px; /* */
+    text-align: center; /* */
+    transition: 0.4s; /* */
+    border-radius: 10px; /* */
+    background-color:white ; /* */
+    box-shadow: 1px 1px 2px ; /* */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Helps distribute space between image, text, button */
 }
 
 .card:hover {
-    box-shadow: 3px 3px 9px #2e3867, -1px -1px 3px #c68113;
-    transition: 0.4s;
+    box-shadow: 3px 3px 9px #2e3867, -1px -1px 3px #c68113; /* */
+    transition: 0.4s; /* */
 }
 
 .cardimg {
-    object-fit: cover;
-    height: 200px;
-    width: 400px;
-    border-radius: 10px 10px 0px 0px;
-
+    object-fit: cover; /* */
+    height: 200px; /* */
+    width: 100%; /* Make image responsive within the card, original was 400px */
+    border-radius: 10px 10px 0px 0px; /* */
 }
 
 .hcard {
-    text-align: center;
-    font-size: 35px;
+    text-align: center; /* */
+    font-size: 35px; /* */
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .pcard {
-    text-align: center;
-    margin: 20px;
+    text-align: center; /* */
+    margin: 10px 20px; /* Original was margin: 20px */
+    flex-grow: 1; /* Allows paragraph to take available vertical space */
 }
 
 .cardbotton {
-    color:#6e4605;
-    text-align: center;
-    cursor: pointer;
-    padding: 7px;
-    font-size: large;
-    transition: 0.3s;
-    border: 3px solid #f39c12;
-    border-radius: 5px;
+    color:#6e4605; /* */
+    text-align: center; /* */
+    cursor: pointer; /* */
+    padding: 7px 15px; /* Original padding was 7px */
+    font-size: large; /* */
+    transition: 0.3s; /* */
+    border: 3px solid #f39c12; /* */
+    border-radius: 5px; /* */
+    margin: 10px auto 20px auto; /* Give buttons some breathing room, esp if two are present */
+    display: inline-block;
 }
 
 .cardbotton:hover {
-    background-color: #f39c12;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    padding: 7px;
-    font-size: large;
-    transition: 0.3s;
-    box-shadow: 1px 1px 5px black;
-}
-
-.firsthead {
-    color: #f39c12;
-    font-size: 50px;
+    background-color: #f39c12; /* */
+    color: white; /* */
+    transition: 0.3s; /* */
+    box-shadow: 1px 1px 5px black; /* */
 }
 
 .hrcard {
-    color: #f39c12;
-    min-width: 50px;
-    border: 3px solid;
-    width: 1230px;
+    color: #f39c12; /* */
+    border: 3px solid; /* Color is inherited */
+    width: 90%;      /* Responsive width, original was 1230px */
+    max-width: 1230px;/* Original width becomes max-width */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .app-header {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-    background-color: white;
-        box-shadow: 1px 1px 5px rgb(153, 151, 151);
-
+    display: flex; /* */
+    justify-content: space-between; /* Arranges .headercontainer (logo+title) and .navheader */
+    align-items: center;
+    flex-wrap: wrap; /* */
+    background-color: white; /* */
+    box-shadow: 1px 1px 5px rgb(153, 151, 151); /* */
+    padding: 10px 20px;
+    width: 100%;
+    /* margin-left: auto; */ /* Removed, this would push the whole header */
 }
 
-.headercontainer {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0px;
-    padding: 0px;
+.headercontainer { /* This div wraps logo and app-title */
+    display: flex; /* */
+    align-items: center; /* Vertically aligns logo and title */
+    /* justify-content: center; */ /* Not needed if parent .app-header controls main spacing */
+    gap: 15px; /* Space between logo and title */
+    flex-wrap: nowrap; /* Prefer logo and title to stay on one line if possible */
+    /* background-color: white; */ /* Inherited from app-header */
 }
 
 .headerlogo {
-    height: 100px;
-    width: 100px;
-    margin-right: 10px;
-        transition: 0.3s;
-
+    height: 80px; /* Original 100px */
+    width: 80px;  /* Original 100px */
+    transition: 0.3s; /* */
+    flex-shrink: 0;
 }
 .headerlogo:hover {
-    height: 120px;
-    width: 120px;
-    margin-right: 10px;
-    transition: 0.3s;
+    height: 90px; /* Original 120px */
+    width: 90px;  /* Original 120px */
+    transition: 0.3s; /* */
+}
+
+.app-title{
+    color: #69460f; /* */
+    transition: 0.5s; /* */
+    font-size: 1.5rem; /* Adjust as needed for visual balance */
+    text-align: left;
+    margin: 0; /* Remove default h1 margins */
+}
+.app-title:hover{
+    color: #2e3867; /* */
+    transition: 0.5s; /* */
 }
 
 .navheader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    flex-wrap: wrap;
-    min-width: 100px;
+    display: flex; /* */
+    align-items: center; /* */
+    /* margin-left: auto; */ /* Removed, .app-header's justify-content: space-between handles this */
+    flex-wrap: wrap; /* */
 }
 
 .ulheader {
-    display: flex;
-    margin: 15px;
-    list-style: none;
-
+    display: flex; /* */
+    margin: 0; /* Original was margin: 15px */
+    padding: 0;
+    list-style: none; /* */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.liheader {
-    margin: 15px;
-    background-color: #f39c12;
-    border-radius: 5px;
-    height: 50px;
-    width: 50px;
-    justify-content: center;
-    min-width: 100px;
-    text-align: center;
-    align-content: center;
-    transition: 0.3s;
-
+.liheader, .liheadercart {
+    margin: 10px; /* Original was margin: 15px */
+    background-color: #f39c12; /* */
+    border-radius: 5px; /* */
+    height: 50px; /* */
+    /* width: 50px; */ /* Removed due to conflict with min-width */
+    min-width: 100px; /* */
+    display: flex;
+    justify-content: center; /* */
+    align-items: center; /* Replaces align-content for single-line flex items */
+    text-align: center; /* */
+    transition: 0.3s; /* */
 }
 
 .headerlink {
-    text-decoration: none;
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    font-size: 20px;
-    color: white;
+    text-decoration: none; /* */
+    padding: 0 15px; /* Allows text to define width, with padding. Original was fixed width/height 100px and padding 10px */
+    font-size: 18px; /* Original 20px */
+    color: white; /* */
+    display: block;
+    line-height: normal; /* Ensure text is vertically centered if padding isn't enough */
+    white-space: nowrap;
 }
-.liheader:hover {
-    background-color: #c68113;
-    transition: 0.5s;
-    box-shadow: 3px 3px 5px #e0dad1 ,-3px -3px 5px #f3e7d5;
-}
-#active{
-        background-color: #c68113;
-}
-.footercontainer{
-    display:flex ;
-    margin-top: 100px;
-    background-color: white;
-    padding: 0px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 1px 1px 5px rgb(153, 151, 151);
 
+.liheader:hover {
+    background-color: #c68113; /* */
+    transition: 0.5s; /* */
+    box-shadow: 3px 3px 5px #e0dad1 ,-3px -3px 5px #f3e7d5; /* */
+}
+.liheadercart:hover {
+    background-color: #000000; /* */
+    transition: 0.3s; /* */
+    box-shadow: none;
+}
+
+#active{
+    background-color: #c68113; /* */
+}
+
+.footercontainer{
+    display:flex ; /* */
+    flex-direction: column;
+    margin-top: 100px; /* */
+    background-color: white; /* */
+    padding: 20px; /* Original padding 0px */
+    justify-content: center; /* */
+    align-items: center; /* */
+    box-shadow: 1px 1px 5px rgb(153, 151, 151); /* */
+    text-align: center;
 }
 .footerbody{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    display: flex; /* */
+    justify-content: center; /* */
+    align-items: center; /* */
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px; /* Space for pfooter */
 }
 .imgfooter{
-        height: 70px;
-    width: 70px;
-    padding: 10px;
-        transition: 0.3s;
+    height: 60px; /* Original 70px */
+    width: 60px;  /* Original 70px */
+    /* padding: 10px; */ /* Padding removed to simplify, or set to 0 if image has own whitespace */
+    transition: 0.3s; /* */
 }
 .imgfooter:hover{
-        height: 80px;
-    width: 80px;
-    padding: 10px;
-        transition: 0.3s;
+    height: 70px; /* Original 80px */
+    width: 70px;  /* Original 80px */
+    transition: 0.3s; /* */
 }
 .pfooter{
-    display: flex;
-        padding: 0px;
-        margin: 0px;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+    padding: 0px; /* */
+    margin: 0px; /* */
+    font-size: 1rem;
+    /* display: flex; */ /* Not needed for single line of text */
+    /* justify-content: center; */ /* Handled by text-align on parent */
+    /* align-items: center; */ /* Handled by text-align on parent */
 }
 .item-price{
-    color: rgb(19, 132, 19);
-    font-family:'Times New Roman', Times, serif;
-    padding-bottom: 3px;
+    color: rgb(19, 132, 19); /* */
+    font-family:'Times New Roman', Times, serif; /* */
+    padding-bottom: 3px; /* */
+    font-size: 1.1rem; /* Example size, adjust as needed */
+    margin: 10px 0; /* Add some spacing around price */
 }
 .item-price:hover{
-    color: rgb(5, 49, 5);
-    transition: 0.3s;
+    color: rgb(5, 49, 5); /* */
+    transition: 0.3s; /* */
 }
-.acatbutton{
-    text-decoration: none;
-    color: #ab6e0b;
-    padding: 5px;
+.acatbutton{ /* This class is on <a> tags in category.html */
+    text-decoration: none; /* */
+    color: #ab6e0b; /* */
+    padding: 5px; /* */
+    font-size: 1rem; /* Example size */
+    display: block; /* Make the link fill the button if wrapped by it */
 }
 .acatbutton:hover{
-    text-decoration: none;
-    color: #e6e6e6;
-}
-.liheadercart{
-    margin: 15px;
-    background-color: #f39c12;
-    border-radius: 5px;
-    height: 50px;
-    width: 50px;
-    justify-content: center;
-    min-width: 100px;
-    text-align: center;
-    align-content: center;
-    transition: 0.3s;
-}
-.liheadercart:hover{
-    transition: 0.3s;
-    background-color: #000000;
-}
-i{
-color: #ffffff;
-}
-.app-title{
-    color: #69460f;
-    transition: 0.5s;
+    text-decoration: none; /* */
+    color: #e6e6e6; /* */
 }
 
-.app-title:hover{
-    color: #2e3867;
-    transition: 0.5s;
+/* Style for h3.h2cat in category.html */
+.h2cat {
+    font-size: 1.1em;
+    color: #333;
+    margin: 15px 0 5px 0;
+}
+
+i.fa-shopping-cart { /* Styles for the cart icon specifically */
+    color: #ffffff; /* */
+    font-size: 24px !important; /* Override inline style if necessary, original inline was 36px. */
+}
+
+
+/* Media Queries for responsiveness */
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .firsthead {
+        margin-top: 30px;
+        font-size: 28px; /* Smaller font size */
+    }
+
+    .card-container {
+        gap: 15px;
+        padding: 0 5px;
+    }
+
+    .card {
+        min-height: auto; /* Allow height to adjust to content */
+        padding-bottom: 15px;
+    }
+
+    .cardimg {
+        height: 160px;
+    }
+
+    .hcard {
+        font-size: 22px; /* Smaller card heading */
+    }
+
+    .pcard {
+        margin: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    .cardbotton {
+        padding: 6px 10px;
+        font-size: medium;
+        margin: 8px auto;
+    }
+
+    .hrcard {
+        width: 95%;
+    }
+
+    .app-header {
+        padding: 10px;
+        flex-direction: column; /* Stack .headercontainer and .navheader */
+        gap: 10px;
+    }
+    .headercontainer { /* Logo and title block */
+        flex-direction: column; /* Stack logo and title */
+        gap: 5px;
+        text-align: center; /* Center title text */
+    }
+
+    .headerlogo {
+        height: 50px;
+        width: 50px;
+    }
+    .headerlogo:hover {
+        height: 55px;
+        width: 55px;
+    }
+
+    .app-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .navheader {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ulheader {
+        flex-direction: column; /* Stack nav items */
+        width: 100%;
+        align-items: center;
+    }
+
+    .liheader, .liheadercart {
+        min-width: 80%; /* Make nav items wider */
+        margin: 8px 0;
+        height: 45px;
+    }
+
+    .headerlink {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    i.fa-shopping-cart {
+        font-size: 22px !important;
+    }
+
+    .footercontainer {
+        margin-top: 60px;
+        padding: 15px;
+    }
+
+    .imgfooter {
+        height: 45px;
+        width: 45px;
+    }
+    .imgfooter:hover {
+        height: 50px;
+        width: 50px;
+    }
+
+    .pfooter {
+        font-size: 0.85rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .firsthead {
+        font-size: 38px;
+    }
+
+    .hcard {
+        font-size: 30px;
+    }
+
+    .app-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 15px;
+        gap: 15px; /* Add some gap between headercontainer and navheader */
+    }
+    .headercontainer {
+        flex-direction: row; /* Ensure logo and title are in a row */
+        text-align: left; /* Align text to the left */
+        gap: 10px; /* Space between logo and title */
+    }
+    
+    .app-title {
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .headerlogo {
+        height: 70px;
+        width: 70px;
+    }
+     .headerlogo:hover {
+        height: 80px;
+        width: 80px;
+    }
+
+    .navheader {
+         width: auto;
+    }
+
+    .ulheader {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .liheader, .liheadercart {
+        min-width: 100px;
+        margin: 10px;
+        height: 50px;
+    }
+
+    .headerlink {
+        font-size: 17px;
+    }
+    i.fa-shopping-cart {
+        font-size: 24px !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) - Revert to original/intended desktop sizes */
+@media (min-width: 992px) {
+    .app-header {
+        padding: 10px 20px;
+        gap: 20px; /* Gap between headercontainer and navheader */
+    }
+    .headerlogo {
+        height: 80px; /* Restored from 100px for better balance */
+        width: 80px;
+    }
+    .headerlogo:hover {
+        height: 90px;
+        width: 90px;
+    }
+    .app-title {
+        font-size: 1.5rem;
+    }
+    .firsthead {
+        font-size: 50px;
+    }
+    .hcard {
+        font-size: 35px;
+    }
+    .headerlink {
+        font-size: 18px; /* Original 20px */
+    }
+    i.fa-shopping-cart {
+        font-size: 24px !important;
+    }
 }
