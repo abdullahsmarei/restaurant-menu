@@ -1,0 +1,251 @@
+body {
+    background-color: rgb(243, 243, 243);
+    margin: 0px;
+    padding: 0px;
+}
+
+.firsthead {
+    margin-top: 50px;
+}
+
+.card-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-width: 400px;
+    min-height: 400px;
+    align-items: center;
+}
+
+.card {
+    height: 150px;
+    width: 150px;
+    min-width: 400px;
+    min-height: 460px;
+    text-align: center;
+    transition: 0.4s;
+    border-radius: 10px;
+    background-color:white ;
+    box-shadow: 1px 1px 2px ;
+}
+
+.card:hover {
+    box-shadow: 3px 3px 9px #2e3867, -1px -1px 3px #c68113;
+    transition: 0.4s;
+}
+
+.cardimg {
+    object-fit: cover;
+    height: 200px;
+    width: 400px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.hcard {
+    text-align: center;
+    font-size: 35px;
+}
+
+.pcard {
+    text-align: center;
+    margin: 20px;
+}
+
+.cardbotton {
+    color:#6e4605;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px;
+    font-size: large;
+    transition: 0.3s;
+    border: 3px solid #f39c12;
+    border-radius: 5px;
+}
+
+.cardbotton:hover {
+    background-color: #f39c12;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px;
+    font-size: large;
+    transition: 0.3s;
+    box-shadow: 1px 1px 5px black;
+}
+
+.firsthead {
+    color: #f39c12;
+    font-size: 50px;
+}
+
+.hrcard {
+    color: #f39c12;
+    min-width: 50px;
+    border: 3px solid;
+    width: 1230px;
+}
+
+.app-header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    background-color: white;
+        box-shadow: 1px 1px 5px rgb(153, 151, 151);
+
+}
+
+.headercontainer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+}
+
+.headerlogo {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+        transition: 0.3s;
+
+}
+.headerlogo:hover {
+    height: 120px;
+    width: 120px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.navheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    flex-wrap: wrap;
+    min-width: 100px;
+}
+
+.ulheader {
+    display: flex;
+    margin: 15px;
+    list-style: none;
+
+}
+
+.liheader {
+    margin: 15px;
+    background-color: #f39c12;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    min-width: 100px;
+    text-align: center;
+    align-content: center;
+    transition: 0.3s;
+
+}
+
+.headerlink {
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+.liheader:hover {
+    background-color: #c68113;
+    transition: 0.5s;
+    box-shadow: 3px 3px 5px #e0dad1 ,-3px -3px 5px #f3e7d5;
+}
+#active{
+        background-color: #c68113;
+}
+.footercontainer{
+    display:flex ;
+    margin-top: 100px;
+    background-color: white;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px rgb(153, 151, 151);
+
+}
+.footerbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.imgfooter{
+        height: 70px;
+    width: 70px;
+    padding: 10px;
+        transition: 0.3s;
+}
+.imgfooter:hover{
+        height: 80px;
+    width: 80px;
+    padding: 10px;
+        transition: 0.3s;
+}
+.pfooter{
+    display: flex;
+        padding: 0px;
+        margin: 0px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+}
+.item-price{
+    color: rgb(19, 132, 19);
+    font-family:'Times New Roman', Times, serif;
+    padding-bottom: 3px;
+}
+.item-price:hover{
+    color: rgb(5, 49, 5);
+    transition: 0.3s;
+}
+.acatbutton{
+    text-decoration: none;
+    color: #ab6e0b;
+    padding: 5px;
+}
+.acatbutton:hover{
+    text-decoration: none;
+    color: #e6e6e6;
+}
+.liheadercart{
+    margin: 15px;
+    background-color: #f39c12;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    min-width: 100px;
+    text-align: center;
+    align-content: center;
+    transition: 0.3s;
+}
+.liheadercart:hover{
+    transition: 0.3s;
+    background-color: #000000;
+}
+i{
+color: #ffffff;
+}
+.app-title{
+    color: #69460f;
+    transition: 0.5s;
+}
+
+.app-title:hover{
+    color: #2e3867;
+    transition: 0.5s;
+}
