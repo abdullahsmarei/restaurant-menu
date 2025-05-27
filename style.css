@@ -256,7 +256,7 @@ color: #ffffff;
     margin-top: 20px;
     margin-left: 100px;
     margin-right: 100px;
-        text-align: center;
+    text-align: center;
     font-size: 30px;
 }
 .h1aboutus{
@@ -273,4 +273,6 @@ color: #ffffff;
 }
 #title{
     background-color: #ffffff;
+    height: 75px;
+    color: #ffffff;
 }
