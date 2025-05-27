@@ -105,7 +105,6 @@ body {
     flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
-            border: 3px solid;
 
 }
 
@@ -278,38 +277,5 @@ color: #ffffff;
     background-color: #ffffff;
     height: 75px;
     color: #ffffff;
-}
-
-.mdp{
-
-}
-.mdp:hover{
-
-}
-.mdcardbotton{
-        color:#6e4605;
-    text-align: center;
-    cursor: pointer;
-    padding: 7px;
-    font-size: large;
-    transition: 0.3s;
-    border: 3px solid #f39c12;
-    border-radius: 5px;
-}
-.mdcardbotton:hover{
-    background-color: #ffffff;
-    color: black;
-    text-align: center;
-    cursor: pointer;
-    padding: 7px;
-    font-size: large;
-    transition: 0.5s;
-    box-shadow: 1px 1px 5px black;
-    border: 3px solid;
-    display: block;
-    justify-content: center;
-    text-align: center;
-    width: 377px;
-    height: 300px;
 }
 
