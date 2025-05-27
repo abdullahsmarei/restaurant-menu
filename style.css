@@ -249,3 +249,17 @@ color: #ffffff;
     color: #2e3867;
     transition: 0.5s;
 }
+.aboutuscontainer{
+    text-align: center;
+}
+.paboutus{
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+        text-align: center;
+    font-size: 30px;
+}
+.h1aboutus{
+    text-decoration: none;
+
+}
