@@ -92,4 +92,4 @@ No compilation or build steps are necessary.
 
 ## License
 
-&copy; 2025 ASM. All rights reserved.
+&copy; 2025 Savor the Moment. All rights reserved.
