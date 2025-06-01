@@ -68,27 +68,14 @@ To explore this project locally:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/your-username/savor-menu-ui.git](https://github.com/your-username/savor-menu-ui.git)
-    ```
-    *(Replace `your-username` with your actual GitHub username.)*
+    git clone [https://github.com/abdullahsmarei/restaurant-menu.git]
+
 2.  **Navigate to the Directory:**
     ```bash
-    cd savor-menu-ui
+    cd restaurant-menu
     ```
 3.  **Launch in Browser:**
     Open `menu.html` or `category.html` directly in any modern web browser.
-
-No compilation or build steps are necessary.
-
-## Visual Showcase
-
-*(Adding screenshots here is crucial for a professional presentation. Visually demonstrate the responsiveness and key pages.)*
-
-**Example: Menu Page on Desktop**
-`[Insert Screenshot of menu.html on a desktop view]`
-
-**Example: Category Selection on Mobile**
-`[Insert Screenshot of category.html on a mobile view]`
 
 ## License
 
